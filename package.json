@@ -1,0 +1,15 @@
+{
+  "name": "day-planner-app",
+  "version": "1.0.0",
+  "description": "an app for planning your day",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Radesh Shiwlochan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  }
+}
