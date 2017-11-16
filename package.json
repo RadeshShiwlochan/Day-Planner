@@ -9,7 +9,9 @@
   "author": "Radesh Shiwlochan",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "express": "^4.16.2",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "request": "^2.83.0"
   }
 }
