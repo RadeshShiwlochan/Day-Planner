@@ -1,9 +1,16 @@
-
-<form method="post" action="user-zipcode">
-	<label for="userZip">Please Enter your Zipcode</label>
-	<input type="text" name="zipcode">
-</form>
-
+<div class="zipCodeWrapper">
+	<div class="firstCol"> 
+	</div>
+	<div class="secondCol">
+		<form method="post" action="user-address-input">
+			<label for="userZip">Please Enter your Zipcode</label>
+			<input type="text" name="zipcode">
+			<button class="btn btn-success">Go!</button>
+		</form>
+	</div>	
+	<div class="thirdCol">
+	</div>
+</div>	
 
 
 {{> footer}}

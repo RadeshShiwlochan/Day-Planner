@@ -7,6 +7,32 @@ html, body {
     margin: 0;
 }
 
+.wrapper {
+	height: 100%;
+	display:grid;
+}
+
+.zipCodeWrapper {
+	display:grid;
+	grid-template-rows: 30px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.firstCol {
+	grid-column: span 1 ;
+}
+
+.secondCol {
+	grid-column: span 1;
+}
+
+.thirdCol {
+	grid-column: span 1;
+}
 h1 {
   color: red;
+}
+
+.navbar {
+    height:30px;
 }

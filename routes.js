@@ -9,6 +9,13 @@ router.get( '/', ( req, res ) => {
     });
 });
 
+router.post( '/user-address-input', ( req, res ) => {
+    console.log( "this is the user input ", req.body.zipcode );
+    res.render('home.hbs', {
+        pageTitle: 'Day Planner'
+    })
+});
+
 router.get( '/notes', ( req, res ) => {
 	res.render( 'notes.hbs', {
 		pageTitle: 'All Notes',
@@ -32,7 +39,6 @@ router.post('/retrieveAddr', ( req, res ) => {
             });
         }    
 	});
-	
 });
 
 module.exports = router;
