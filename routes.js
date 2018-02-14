@@ -9,13 +9,6 @@ router.get( '/', ( req, res ) => {
     });
 });
 
-router.post( '/user-address-input', ( req, res ) => {
-    console.log( "this is the user input ", req.body.zipcode );
-    res.render('home.hbs', {
-        pageTitle: 'Day Planner'
-    })
-});
-
 router.get( '/notes', ( req, res ) => {
 	res.render( 'notes.hbs', {
 		pageTitle: 'All Notes',
@@ -25,13 +18,14 @@ router.get( '/notes', ( req, res ) => {
 	});
 });
 
-router.post('/retrieveAddr', ( req, res ) => {
-	let inputAddress = req.body.userAddress;
-	console.log( inputAddress );
+router.post('/user-address-input', ( req, res ) => {
+	let inputAddress = req.body.zipcode;
+	console.log( "This is the zipcode ", inputAddress );
 	geoLocation.getLocation( inputAddress, ( err, results ) => {
 	    if ( err ) console.log( err );
 	    else { 
-            res.render( 'notes.hbs', {
+	    	console.log( JSON.stringify(results, undefined, 2 ) );
+            res.render( 'home.hbs', {
     	        pageTitle: 'New Notes',
                 add: results.address,
                 lat: results.latitude,
